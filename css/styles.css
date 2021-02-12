@@ -84,26 +84,70 @@ header {
   margin-bottom: 60px;
 }
 
-.c1 {
+.info-content {
   grid-column: 1 / 6;
-  background-color: orange;
+  align-self: center;
 }
 
-.c2 {
-  grid-column: 6 / 12;
-  background-color: forestgreen;
-  height: 360px;
+.info-content h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.info-content p {
+  color: var(--gravish-blue);
+  margin-bottom: 30px;
+}
+
+.info-content button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
+  cursor: pointer;
+}
+
+.btn-chrome {
+  background: var(--soft-blue);
+  border: 1px solid var(--soft-blue);
+  color: white;
+  cursor: pointer;
+}
+.btn-chrome:hover,
+.btn-chrome:focus {
+  background: none;
+  color: var(--soft-blue);
+}
+
+.btn-firefox {
+  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  color: var(--gravish-blue);
+}
+.btn-firefox:hover,
+.btn-firefox:focus {
+  background: none;
+  border: 1px solid var(--dark-blue);
+  color: #5d5c69;
+}
+
+.info-ilustration {
+  grid-column: 6 / 13;
   position: relative;
 }
 
-.c2::after {
+.info-ilustration::after {
   content: "";
   display: block;
-  background: blue;
-  width: 100%;
-  height: 70%;
+  background: var(--soft-blue);
+  width: 70%;
+  height: 65%;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
   position: absolute;
-  right: -16.5%;
+  right: 0;
   bottom: -20px;
   z-index: -1;
 }
