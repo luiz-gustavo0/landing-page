@@ -40,3 +40,23 @@ const addActiveTab = (tab) => {
   const matchingSection = document.querySelector(href);
   matchingSection.classList.add("is-active");
 };
+
+// Acordion list
+
+const accordionList = document.querySelectorAll(".faq-list dt");
+
+console.log(accordionList);
+
+function toogleAccordion(list) {
+  list.classList.toggle("active");
+  list.nextElementSibling.classList.toggle("active");
+}
+
+function accordionEvent() {
+  accordionList.forEach((item) => {
+    item.addEventListener("click", () => toogleAccordion(item));
+  });
+}
+
+toogleAccordion(accordionList[0]);
+accordionEvent();
