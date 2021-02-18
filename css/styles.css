@@ -557,7 +557,72 @@ header {
   color: var(--soft-red);
 }
 
-footer {
-  background-color: blue;
+.footer {
+  grid-column: 1 / 13;
+  background: var(--dark-blue);
+}
+
+.footer-menu {
+  grid-column: 2 / 7;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.footer-menu svg path {
+  fill: #fff;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  margin-left: 36px;
+}
+
+.footer-list li a {
+  display: inline-block;
+  padding: 10px 24px;
+  color: var(--gravish-blue);
+  text-transform: uppercase;
+  font-size: 14px;
+
+  transition: 0.5s ease;
+}
+
+.footer-list li a:hover {
+  color: var(--soft-red);
+}
+
+.footer-social-link {
+  grid-column: 11;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social-link a:nth-child(1) {
+  margin-left: 30px;
+}
+
+.footer-social-link a svg path {
+  transition: 0.7s ease;
+}
+
+.footer-social-link a svg path:hover {
+  fill: var(--soft-red);
+}
+
+.attribution {
   grid-column: 2 / 12;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: var(--gravish-blue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
