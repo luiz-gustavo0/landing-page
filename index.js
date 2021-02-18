@@ -60,3 +60,25 @@ function accordionEvent() {
 
 toogleAccordion(accordionList[0]);
 accordionEvent();
+
+// form
+
+function validarEmail(email) {
+  const regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regx.test(email);
+}
+
+const form = document.querySelector("form");
+
+form.addEventListener("change", ({ target }) => {
+  if (!validarEmail(target.value) || target.value === "") {
+    target.classList.add("invalid");
+    target.nextElementSibling.classList.add("invalid");
+    target.setCustomValidity("Whoops, make sure it's an email");
+    target.nextElementSibling.innerText = target.validationMessage;
+  } else {
+    target.classList.remove("invalid");
+    target.nextElementSibling.classList.remove("invalid");
+    target.setCustomValidity("");
+  }
+});
