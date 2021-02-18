@@ -23,17 +23,44 @@
   <body>
     <div class="container">
       <header>
-        <div class="header-container">
+        <div class="header-container active">
           <div class="logo">
-            <img src="./images/logo-bookmark.svg" alt="Logotipo Bookmark" />
+            <img
+              src="./images/logo-bookmark.svg"
+              onload="SVGInject(this)"
+              alt="Logotipo Bookmark"
+            />
           </div>
-          <div class="menu">
+          <button class="btn-mobile">
+            <img
+              src="./images/icon-hamburger.svg"
+              onload="SVGInject(this)"
+              alt=""
+            />
+          </button>
+          <div class="menu active">
             <ul>
               <li><a href="#">Features</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Contact</a></li>
               <li><a href="#" class="btn-login">Login</a></li>
             </ul>
+          </div>
+          <div class="social-link">
+            <a href="#">
+              <img
+                src="./images/icon-facebook.svg"
+                onload="SVGInject(this)"
+                alt="icone facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./images/icon-twitter.svg"
+                onload="SVGInject(this)"
+                alt="icone twitter"
+              />
+            </a>
           </div>
         </div>
       </header>
@@ -49,8 +76,10 @@
             free.
           </p>
 
-          <button class="btn-chrome">Get it on Chrome</button>
-          <button class="btn-firefox">Get it on Firefox</button>
+          <div class="btn-group">
+            <button class="btn-chrome">Get it on Chrome</button>
+            <button class="btn-firefox">Get it on Firefox</button>
+          </div>
         </div>
         <div class="info-ilustration">
           <img
@@ -257,7 +286,10 @@
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="#">Luiz Gustavo Santos</a>.
+          >. Coded by
+          <a href="https://www.linkedin.com/in/luiz-gustavo0/" target="_blank"
+            >Luiz Gustavo Santos</a
+          >.
         </p>
       </footer>
     </div>

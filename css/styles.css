@@ -37,6 +37,12 @@ ul {
   grid-template-columns: repeat(12, 1fr);
 }
 
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
 header {
   grid-column: 2 / 12;
   padding: 40px 0;
@@ -58,6 +64,7 @@ header {
   display: inline-block;
   padding: 10px;
   margin-left: 20px;
+  transition: 0.5s ease;
 }
 
 .menu li a:hover,
@@ -72,11 +79,126 @@ header {
   color: #fff;
   border-radius: 5px;
   border: 1px solid var(--soft-red);
+  transition: 0.5s ease;
 }
 
 .btn-login:hover,
 .btn-login:focus {
   background: #fff;
+}
+
+.btn-mobile {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.social-link {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  header {
+    grid-column: 1 / 9;
+    padding: 40px 20px;
+    position: relative;
+  }
+  .menu {
+    display: none;
+  }
+
+  .header-container.active {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .active .logo svg path {
+    fill: #fff;
+  }
+
+  .btn-mobile {
+    display: block;
+    background: url("../images/icon-close.svg") no-repeat center center;
+    position: absolute;
+    margin-top: 5px;
+    right: 40px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .btn-mobile > svg {
+    display: none;
+  }
+
+  .active .menu {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .active .menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active .menu li {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid var(--gravish-blue);
+    text-align: center;
+  }
+
+  .active .menu li a {
+    margin-left: 0;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.5s ease;
+  }
+
+  .active .menu li a:hover,
+  .active .menu li a:focus {
+    color: var(--soft-red);
+  }
+
+  .active .btn-login {
+    width: 100%;
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .social-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .social-link a {
+    display: inline-block;
+    padding: 20px;
+  }
+
+  .social-link a svg path {
+    transition: 0.7s ease;
+  }
+
+  .social-link a svg path:hover {
+    fill: var(--soft-red);
+  }
 }
 
 .section-1 {
@@ -108,6 +230,7 @@ header {
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
   cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .btn-chrome {
@@ -151,6 +274,38 @@ header {
   right: 0;
   bottom: -20px;
   z-index: -1;
+}
+
+@media (max-width: 960px) {
+  .section-1 {
+    grid-column: 1 / 9;
+  }
+  .info-content {
+    grid-column: 2 / 8;
+    grid-row: 3;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .info-ilustration {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    margin-bottom: 80px;
+    justify-content: center;
+  }
+  .info-content h1,
+  .info-content p {
+    text-align: center;
+  }
+  .info-content .btn-group {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-content h1 {
+    font-size: calc(2rem * 0.9);
+  }
 }
 
 .section-features {
@@ -202,6 +357,7 @@ header {
   font-size: 1rem;
   padding: 20px 40px;
   color: var(--gravish-blue);
+  transition: 0.5s ease;
 }
 
 .tabs li a:hover {
@@ -361,6 +517,7 @@ header {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 25%);
+  transition: 0.5s ease;
 }
 
 .card-button button:hover,
@@ -549,6 +706,7 @@ header {
   border: 1px solid var(--soft-red);
   color: #fff;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .join-us form button:hover,
