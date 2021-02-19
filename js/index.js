@@ -1,16 +1,16 @@
-// const containerHeader = document.querySelector(".container-header");
-// const menu = document.querySelector(".menu");
-// const list = document.querySelector(".list");
-// const button = document.querySelector(".btn-menu");
+const containerHeader = document.querySelector(".header-container");
+const menu = document.querySelector(".menu");
+const button = document.querySelector(".btn-mobile");
 
-// button.addEventListener("click", handleClick);
+console.log(containerHeader, menu, button);
 
-// function handleClick() {
-//   button.classList.toggle("active");
-//   containerHeader.classList.toggle("active");
-//   menu.classList.toggle("active");
-//   list.classList.toggle("active");
-// }
+button.addEventListener("click", handleClick);
+
+function handleClick() {
+  button.classList.toggle("active");
+  containerHeader.classList.toggle("active");
+  menu.classList.toggle("active");
+}
 
 const tabs = document.querySelectorAll(".navigate-tabs .tabs li");
 const sections = document.querySelectorAll(".tab-content");
